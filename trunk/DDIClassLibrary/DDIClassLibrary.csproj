@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B692BCBF-EF72-4C83-8BED-15376FA54889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDIClassLibrary</RootNamespace>
+    <AssemblyName>DDIClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="archive\AccessType.cs" />
+    <Compile Include="archive\AddressType.cs" />
+    <Compile Include="archive\ArchiveSpecificType.cs" />
+    <Compile Include="archive\URLType.cs" />
+    <Compile Include="archive\TelephoneType.cs" />
+    <Compile Include="archive\RoleType.cs" />
+    <Compile Include="archive\OrganizationType.cs" />
+    <Compile Include="archive\LocationType.cs" />
+    <Compile Include="archive\ItemType.cs" />
+    <Compile Include="archive\IndividualType.cs" />
+    <Compile Include="archive\IndividualNameType.cs" />
+    <Compile Include="archive\InstantMessagingType.cs" />
+    <Compile Include="archive\LanguageLevelCodeType.cs" />
+    <Compile Include="archive\CollectionType.cs" />
+    <Compile Include="archive\IndividualLanguageType.cs" />
+    <Compile Include="archive\DDIMaintenanceAgencyIDType.cs" />
+    <Compile Include="archive\FormType.cs" />
+    <Compile Include="archive\OrganizationSchemeType.cs" />
+    <Compile Include="archive\PositionType.cs" />
+    <Compile Include="archive\RelationType.cs" />
+    <Compile Include="archive\ResearcherIDType.cs" />
+    <Compile Include="archive\StudyClassType.cs" />
+    <Compile Include="archive\VersionDistinctionType.cs" />
+    <Compile Include="comparative\CodeMapType.cs" />
+    <Compile Include="comparative\ComparisonType.cs" />
+    <Compile Include="comparative\CorrespondenceType.cs" />
+    <Compile Include="comparative\GenericMapType.cs" />
+    <Compile Include="comparative\ItemMapType.cs" />
+    <Compile Include="comparative\UserDefinedCorrespondencePropertyType.cs" />
+    <Compile Include="conceptualcomponent\ConceptGroupType.cs" />
+    <Compile Include="conceptualcomponent\ConceptReferenceType.cs" />
+    <Compile Include="conceptualcomponent\ConceptSchemeType.cs" />
+    <Compile Include="conceptualcomponent\ConceptType.cs" />
+    <Compile Include="conceptualcomponent\ConceptualComponentType.cs" />
+    <Compile Include="conceptualcomponent\DataElementConceptType.cs" />
+    <Compile Include="conceptualcomponent\GeographicLocationSchemeType.cs" />
+    <Compile Include="conceptualcomponent\GeographicStructureSchemeType.cs" />
+    <Compile Include="conceptualcomponent\SimilarConceptType.cs" />
+    <Compile Include="conceptualcomponent\UniverseSchemeType.cs" />
+    <Compile Include="conceptualcomponent\UniverseType.cs" />
+    <Compile Include="conceptualcomponent\VocabularyType.cs" />
+    <Compile Include="IHaveDefaultValues.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\AttributeType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\TopLeftTableAnchorType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\PhysicalTableLocationType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\DataItemType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\DimensionType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\MeasureReferenceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\MeasureType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\NCubeInstanceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_tabular\RecordLayoutType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\AttributeType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\DataItemType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\DimensionType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\MeasureReferenceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\MeasureType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\NCubeInstanceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_normal\RecordLayoutType.cs" />
+    <Compile Include="datacollection\AggregationType.cs" />
+    <Compile Include="datacollection\CategoryDomainType.cs" />
+    <Compile Include="datacollection\CodeDomainType.cs" />
+    <Compile Include="datacollection\CodingType.cs" />
+    <Compile Include="datacollection\CollectionEventType.cs" />
+    <Compile Include="datacollection\ComputationItemType.cs" />
+    <Compile Include="datacollection\ControlConstructType.cs" />
+    <Compile Include="datacollection\ConditionalTextType.cs" />
+    <Compile Include="datacollection\ControlConstructSchemeType.cs" />
+    <Compile Include="datacollection\VariableSetType.cs" />
+    <Compile Include="datacollection\TextType.cs" />
+    <Compile Include="datacollection\StructuredMixedResponseDomainType.cs" />
+    <Compile Include="datacollection\StatementItemType.cs" />
+    <Compile Include="datacollection\ItemSequenceTypeType.cs" />
+    <Compile Include="datacollection\SpecificSequenceType.cs" />
+    <Compile Include="datacollection\SourceReferenceType.cs" />
+    <Compile Include="datacollection\SequenceType.cs" />
+    <Compile Include="datacollection\RepeatWhileType.cs" />
+    <Compile Include="datacollection\RepeatUntilType.cs" />
+    <Compile Include="datacollection\QuestionSchemeType.cs" />
+    <Compile Include="datacollection\QuestionItemType.cs" />
+    <Compile Include="datacollection\QuestionGroupType.cs" />
+    <Compile Include="datacollection\QuestionConstructType.cs" />
+    <Compile Include="datacollection\ProcessingType.cs" />
+    <Compile Include="datacollection\OriginType.cs" />
+    <Compile Include="datacollection\OperationType.cs" />
+    <Compile Include="datacollection\NumericDomainType.cs" />
+    <Compile Include="datacollection\MultipleQuestionItemType.cs" />
+    <Compile Include="datacollection\MethodologyType.cs" />
+    <Compile Include="datacollection\LoopType.cs" />
+    <Compile Include="datacollection\LiteralTextType.cs" />
+    <Compile Include="datacollection\InterviewerInstructionSchemeType.cs" />
+    <Compile Include="datacollection\InterviewerInstructionReferenceType.cs" />
+    <Compile Include="datacollection\InstrumentType.cs" />
+    <Compile Include="datacollection\InstructionType.cs" />
+    <Compile Include="datacollection\IfThenElseType.cs" />
+    <Compile Include="datacollection\GeographicDomainType.cs" />
+    <Compile Include="datacollection\GenerationInstructionType.cs" />
+    <Compile Include="datacollection\GeneralInstructionType.cs" />
+    <Compile Include="datacollection\ExternalInterviewerInstructionReferenceType.cs" />
+    <Compile Include="datacollection\ElseIfType.cs" />
+    <Compile Include="datacollection\DynamicTextType.cs" />
+    <Compile Include="datacollection\DateTimeDomainType.cs" />
+    <Compile Include="datacollection\DataSourceType.cs" />
+    <Compile Include="datacollection\DataCollectionType.cs" />
+    <Compile Include="datacollection\DataCollectionFrequencyType.cs" />
+    <Compile Include="datacollection\DataAppraisalInformationType.cs" />
+    <Compile Include="dataset\VariableSetType.cs" />
+    <Compile Include="dataset\VariableOrderType.cs" />
+    <Compile Include="dataset\VariableItemType.cs" />
+    <Compile Include="dataset\RecordType.cs" />
+    <Compile Include="dataset\RecordSetType.cs" />
+    <Compile Include="dataset\ItemValueType.cs" />
+    <Compile Include="dataset\ItemSetType.cs" />
+    <Compile Include="dataset\DataSetType.cs" />
+    <Compile Include="dcelements\DCElementsType.cs" />
+    <Compile Include="dcelements\elementType.cs" />
+    <Compile Include="ddiprofile\UsedType.cs" />
+    <Compile Include="ddiprofile\DDIProfileType.cs" />
+    <Compile Include="ddiprofile\NotUsedType.cs" />
+    <Compile Include="ddiprofile\XMLPrefixMapType.cs" />
+    <Compile Include="group\ConceptType.cs" />
+    <Compile Include="group\SubGroupType.cs" />
+    <Compile Include="group\StudyUnitType.cs" />
+    <Compile Include="group\ResourcePackageType.cs" />
+    <Compile Include="group\PhysicalDataProductType.cs" />
+    <Compile Include="group\LogicalProductType.cs" />
+    <Compile Include="group\TimeGroupCodeType.cs" />
+    <Compile Include="group\PanelGroupCodeType.cs" />
+    <Compile Include="group\LanguageGroupCodeType.cs" />
+    <Compile Include="group\InstrumentGroupCodeType.cs" />
+    <Compile Include="group\GeographyGroupCodeType.cs" />
+    <Compile Include="group\DataSetGroupCodeType.cs" />
+    <Compile Include="group\LocalHoldingPackageType.cs" />
+    <Compile Include="group\GroupType.cs" />
+    <Compile Include="group\DataCollectionType.cs" />
+    <Compile Include="instance\DDIInstanceType.cs" />
+    <Compile Include="instance\TranslationType.cs" />
+    <Compile Include="logicalproduct\AggregationDefinitionType.cs" />
+    <Compile Include="logicalproduct\AttachmentLevelCodeType.cs" />
+    <Compile Include="logicalproduct\AttributeType.cs" />
+    <Compile Include="logicalproduct\BaseLogicalProductType.cs" />
+    <Compile Include="logicalproduct\CaseSpecificationType.cs" />
+    <Compile Include="logicalproduct\CategoryGroupType.cs" />
+    <Compile Include="logicalproduct\CategorySchemeType.cs" />
+    <Compile Include="logicalproduct\CategoryType.cs" />
+    <Compile Include="logicalproduct\CodeRepresentationType.cs" />
+    <Compile Include="logicalproduct\CodeSchemeReferenceType.cs" />
+    <Compile Include="logicalproduct\CodeSchemeType.cs" />
+    <Compile Include="logicalproduct\CodeType.cs" />
+    <Compile Include="logicalproduct\CohortType.cs" />
+    <Compile Include="logicalproduct\ConcatenatedValueType.cs" />
+    <Compile Include="logicalproduct\CoordinateGroupType.cs" />
+    <Compile Include="logicalproduct\CaseIdentificationType.cs" />
+    <Compile Include="logicalproduct\AdditivityCodeType.cs" />
+    <Compile Include="logicalproduct\AggregationMethodCodeType.cs" />
+    <Compile Include="logicalproduct\VariableValueReferenceType.cs" />
+    <Compile Include="logicalproduct\VariableUsedReferenceType.cs" />
+    <Compile Include="logicalproduct\VariableType.cs" />
+    <Compile Include="logicalproduct\VariableSpecificationReferenceType.cs" />
+    <Compile Include="logicalproduct\VariablesInRecordType.cs" />
+    <Compile Include="logicalproduct\VariableSchemeType.cs" />
+    <Compile Include="logicalproduct\VariableGroupType.cs" />
+    <Compile Include="logicalproduct\VariableConcatenationType.cs" />
+    <Compile Include="logicalproduct\ValueType.cs" />
+    <Compile Include="logicalproduct\RepresentationType.cs" />
+    <Compile Include="logicalproduct\ValueTypeCodeType.cs" />
+    <Compile Include="logicalproduct\RecordRelationshipType.cs" />
+    <Compile Include="logicalproduct\RecordReferenceSourceType.cs" />
+    <Compile Include="logicalproduct\RelationCodeType.cs" />
+    <Compile Include="logicalproduct\HierarchyCodeType.cs" />
+    <Compile Include="logicalproduct\RangeType.cs" />
+    <Compile Include="logicalproduct\NCubeType.cs" />
+    <Compile Include="logicalproduct\NCubesInRecordType.cs" />
+    <Compile Include="logicalproduct\NCubeSchemeType.cs" />
+    <Compile Include="logicalproduct\NCubeLogicalProductType.cs" />
+    <Compile Include="logicalproduct\NCubeGroupType.cs" />
+    <Compile Include="logicalproduct\MeasureType.cs" />
+    <Compile Include="logicalproduct\LogicalRecordType.cs" />
+    <Compile Include="logicalproduct\LogicalProductType.cs" />
+    <Compile Include="logicalproduct\LevelType.cs" />
+    <Compile Include="logicalproduct\IntervalType.cs" />
+    <Compile Include="logicalproduct\IncludedCodeReferenceType.cs" />
+    <Compile Include="logicalproduct\GroupTypeCodedType.cs" />
+    <Compile Include="logicalproduct\GenerationType.cs" />
+    <Compile Include="logicalproduct\DimensionType.cs" />
+    <Compile Include="logicalproduct\DataRelationshipType.cs" />
+    <Compile Include="logicalproduct\DataExistenceType.cs" />
+    <Compile Include="logicalproduct\GroupTypeCodeTypeType.cs" />
+    <Compile Include="logicalproduct\IsComprehensiveType.cs" />
+    <Compile Include="physicaldataproduct\BaseRecordLayoutType.cs" />
+    <Compile Include="physicaldataproduct\RecordLayoutType.cs" />
+    <Compile Include="physicaldataproduct\RecordLayoutSchemeType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalStructureType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalStructureSchemeType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalStructureReferenceType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalRecordSegmentType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalLocationType.cs" />
+    <Compile Include="physicaldataproduct\PhysicalDataProductType.cs" />
+    <Compile Include="physicaldataproduct\KeyVariableReferenceType.cs" />
+    <Compile Include="physicaldataproduct\GrossRecordStructureType.cs" />
+    <Compile Include="physicaldataproduct\DataItemType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\AttributeType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\NCubeInstanceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\MeasureType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\MeasureReferenceType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\DimensionType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\DataItemType.cs" />
+    <Compile Include="physicaldataproduct_ncube_inline\RecordLayoutType.cs" />
+    <Compile Include="physicaldataproduct_proprietary\DataItemType.cs" />
+    <Compile Include="physicaldataproduct_proprietary\DataItemAddressType.cs" />
+    <Compile Include="physicaldataproduct_proprietary\ProprietaryRecordLayoutType.cs" />
+    <Compile Include="physicalinstance\CategoryStatisticsType.cs" />
+    <Compile Include="physicalinstance\CategoryStatisticType.cs" />
+    <Compile Include="physicalinstance\CategoryStatisticTypeCodedType.cs" />
+    <Compile Include="physicalinstance\CategoryStatisticTypeCodedTypeType.cs" />
+    <Compile Include="physicalinstance\VariableStatisticsType.cs" />
+    <Compile Include="physicalinstance\URIType.cs" />
+    <Compile Include="physicalinstance\SummaryStatisticTypeCodedTypeType.cs" />
+    <Compile Include="physicalinstance\SummaryStatisticTypeCodedType.cs" />
+    <Compile Include="physicalinstance\SummaryStatisticType.cs" />
+    <Compile Include="physicalinstance\StatisticsType.cs" />
+    <Compile Include="physicalinstance\FilterType.cs" />
+    <Compile Include="physicalinstance\PathType.cs" />
+    <Compile Include="physicalinstance\GrossFileStructureType.cs" />
+    <Compile Include="physicalinstance\FingerprintType.cs" />
+    <Compile Include="physicalinstance\StatisticalDataFileReferenceType.cs" />
+    <Compile Include="physicalinstance\FilterCategoryStatisticType.cs" />
+    <Compile Include="physicalinstance\FilterCategoryStatisticsType.cs" />
+    <Compile Include="physicalinstance\DataFileIdentificationType.cs" />
+    <Compile Include="physicalinstance\PhysicalInstanceType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reusable\AbstractIdentifiableType.cs" />
+    <Compile Include="reusable\AbstractMaintainableType.cs" />
+    <Compile Include="reusable\AbstractVersionableType.cs" />
+    <Compile Include="reusable\AccessRestrictionDateType.cs" />
+    <Compile Include="reusable\ActionCodeType.cs" />
+    <Compile Include="reusable\AudioType.cs" />
+    <Compile Include="reusable\BoundingBoxType.cs" />
+    <Compile Include="reusable\CategoryRelationCodeType.cs" />
+    <Compile Include="reusable\CategoryRepresentationType.cs" />
+    <Compile Include="reusable\CharacterParameterType.cs" />
+    <Compile Include="reusable\CitationType.cs" />
+    <Compile Include="reusable\CodeType.cs" />
+    <Compile Include="reusable\CommandFileType.cs" />
+    <Compile Include="reusable\CommandType.cs" />
+    <Compile Include="reusable\ContributorType.cs" />
+    <Compile Include="reusable\CodeValueType.cs" />
+    <Compile Include="reusable\AudioClipTypeCodedType.cs" />
+    <Compile Include="reusable\CodeRepresentationType.cs" />
+    <Compile Include="reusable\CoordinatePairsType.cs" />
+    <Compile Include="reusable\OneCharStringType.cs" />
+    <Compile Include="reusable\RangeValueType.cs" />
+    <Compile Include="reusable\NumericRepresentationType.cs" />
+    <Compile Include="reusable\NumberRangeValueType.cs" />
+    <Compile Include="reusable\ImageType.cs" />
+    <Compile Include="reusable\GeographicRepresentationType.cs" />
+    <Compile Include="reusable\ExternalCategoryRepresentationType.cs" />
+    <Compile Include="reusable\DateTimeRepresentationType.cs" />
+    <Compile Include="reusable\DateTypeCodeType.cs" />
+    <Compile Include="reusable\EmailType.cs" />
+    <Compile Include="reusable\EmbargoType.cs" />
+    <Compile Include="reusable\ExcludeType.cs" />
+    <Compile Include="reusable\GeographicCoverageType.cs" />
+    <Compile Include="reusable\GeographicDescriptionCodeType.cs" />
+    <Compile Include="reusable\GeographicLevelType.cs" />
+    <Compile Include="reusable\GeographicLocationType.cs" />
+    <Compile Include="reusable\GeographicStructureType.cs" />
+    <Compile Include="reusable\GeographyCodeType.cs" />
+    <Compile Include="reusable\GeographyType.cs" />
+    <Compile Include="reusable\GeographyValuesType.cs" />
+    <Compile Include="reusable\GeographyValueType.cs" />
+    <Compile Include="reusable\InternationalCodeValueType.cs" />
+    <Compile Include="reusable\LevelReferenceType.cs" />
+    <Compile Include="reusable\LifecycleEventType.cs" />
+    <Compile Include="reusable\LifecycleInformationType.cs" />
+    <Compile Include="reusable\NumberRangeType.cs" />
+    <Compile Include="reusable\NumericTypeCodeType.cs" />
+    <Compile Include="reusable\ParentGeographyType.cs" />
+    <Compile Include="reusable\PointFormatType.cs" />
+    <Compile Include="reusable\PointType.cs" />
+    <Compile Include="reusable\PolygonType.cs" />
+    <Compile Include="reusable\ProprietaryInfoType.cs" />
+    <Compile Include="reusable\ProprietaryPropertyType.cs" />
+    <Compile Include="reusable\SchemeReferenceType.cs" />
+    <Compile Include="reusable\SoftwareType.cs" />
+    <Compile Include="reusable\SpatialCoordinateType.cs" />
+    <Compile Include="reusable\TemporalCoverageType.cs" />
+    <Compile Include="reusable\TimeZoneCodeType.cs" />
+    <Compile Include="reusable\TopicalCoverageType.cs" />
+    <Compile Include="reusable\CountryType.cs" />
+    <Compile Include="reusable\CoverageType.cs" />
+    <Compile Include="reusable\LabelType.cs" />
+    <Compile Include="reusable\TextDomainType.cs" />
+    <Compile Include="reusable\TextRepresentationType.cs" />
+    <Compile Include="reusable\ProgrammingLanguageCodeType.cs" />
+    <Compile Include="reusable\RepresentationType.cs" />
+    <Compile Include="reusable\StructuredCommandType.cs" />
+    <Compile Include="reusable\VersionableType.cs" />
+    <Compile Include="reusable\NameType.cs" />
+    <Compile Include="reusable\FundingInformationType.cs" />
+    <Compile Include="reusable\IdentifiedStructuredStringType.cs" />
+    <Compile Include="reusable\SeriesStatementType.cs" />
+    <Compile Include="reusable\VideoClipTypeCodedType.cs" />
+    <Compile Include="reusable\VideoType.cs" />
+    <Compile Include="reusable\LineParameterType.cs" />
+    <Compile Include="reusable\ShapeCodedType.cs" />
+    <Compile Include="reusable\ImageAreaType.cs" />
+    <Compile Include="reusable\OtherMaterialType.cs" />
+    <Compile Include="reusable\SegmentType.cs" />
+    <Compile Include="reusable\TextualType.cs" />
+    <Compile Include="reusable\VersionType.cs" />
+    <Compile Include="reusable\URNType.cs" />
+    <Compile Include="reusable\IDType.cs" />
+    <Compile Include="reusable\ReferenceType.cs" />
+    <Compile Include="reusable\RelationshipType.cs" />
+    <Compile Include="reusable\StructuredStringType.cs" />
+    <Compile Include="reusable\NoteTypeCodeType.cs" />
+    <Compile Include="reusable\IdentifiableType.cs" />
+    <Compile Include="reusable\HistoricalDateType.cs" />
+    <Compile Include="reusable\CreatorType.cs" />
+    <Compile Include="reusable\DateType.cs" />
+    <Compile Include="reusable\InternationalStringType.cs" />
+    <Compile Include="reusable\MaintainableType.cs" />
+    <Compile Include="reusable\NoteType.cs" />
+    <Compile Include="reusable\TypedStringType.cs" />
+    <Compile Include="reusable\UserIDType.cs" />
+    <Compile Include="archive\ArchiveType.cs" />
+    <Compile Include="studyunit\KindOfDataType.cs" />
+    <Compile Include="studyunit\KindOfDataTypeType.cs" />
+    <Compile Include="studyunit\StudyUnitType.cs" />
+    <Compile Include="DDIClassLibraryWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Schemas\archive.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\comparative.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\conceptualcomponent.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\datacollection.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\dataset.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\dcelements.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\ddi-xhtml11-model-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\ddi-xhtml11-modules-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\ddi-xhtml11.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\ddiprofile.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\group.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\instance.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\logicalproduct.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicaldataproduct.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicaldataproduct_ncube_inline.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicaldataproduct_ncube_normal.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicaldataproduct_ncube_tabular.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicaldataproduct_proprietary.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\physicalinstance.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\reusable.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\simpledc20021212.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\studyunit.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-attribs-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-bdo-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-blkphras-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-blkpres-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-blkstruct-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-charent-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-datatypes-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-framework-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-hypertext-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-inlphras-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-inlpres-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-inlstruct-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-inlstyle-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-list-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-notations-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-pres-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-table-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\XHTML\xhtml-text-1.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\xml.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

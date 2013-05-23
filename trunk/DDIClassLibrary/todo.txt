@@ -1,0 +1,6 @@
+﻿
+Use CultureInfo instead of string for lang?
+Conversion to 3.2
+Conversion to 2.5
+Documentation
+Object or Reference?
