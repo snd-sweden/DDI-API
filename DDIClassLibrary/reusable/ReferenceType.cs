@@ -10,6 +10,24 @@ namespace DDIClassLibrary.reusable
 
         }
 
+        public ReferenceType(IdentifiableType identifiable)
+        {
+            this.ID = identifiable.id;
+        }
+        
+        public ReferenceType(VersionableType versionable)
+        {
+            this.ID = versionable.id;
+            this.Version = versionable.version;
+        }
+
+        public ReferenceType(MaintainableType maintainable)
+        {
+            this.ID = maintainable.id;
+            this.Version = maintainable.version;
+            this.IdentifyingAgency = maintainable.agency;
+        }
+
         [System.Xml.Serialization.XmlAttribute(DataType = "anyURI")]
         public string URI { get; set; }
 
