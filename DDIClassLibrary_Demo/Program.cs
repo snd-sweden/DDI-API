@@ -136,6 +136,7 @@ namespace DDIClassLibrary_Demo
                         Content = "Variable #" + i
                     });
                     var.QuestionReference.Add(new ReferenceType(qi));
+                    vs.Variable.Add(var);
                 }
             }
 

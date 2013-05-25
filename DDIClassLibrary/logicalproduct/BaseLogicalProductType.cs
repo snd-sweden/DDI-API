@@ -17,6 +17,12 @@ namespace DDIClassLibrary.logicalproduct
             this.DataRelationship = new List<DataRelationshipType>();
             this.OtherMaterial = new List<OtherMaterialType>();
             this.Note = new List<NoteType>();
+            this.CategoryScheme = new List<CategorySchemeType>();
+            this.CategorySchemeReference = new List<ReferenceType>();
+            this.CodeScheme = new List<CodeSchemeType>();
+            this.CodeSchemeReference = new List<ReferenceType>();
+            this.VariableScheme = new List<VariableSchemeType>();
+            this.VariableSchemeReference = new List<ReferenceType>();
         }
 
         [System.Xml.Serialization.XmlElement(IsNullable = true, Order = 0)]
