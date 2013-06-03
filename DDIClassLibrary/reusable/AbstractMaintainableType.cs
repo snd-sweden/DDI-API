@@ -1,4 +1,5 @@
-﻿namespace DDIClassLibrary.reusable
+﻿using System;
+namespace DDIClassLibrary.reusable
 {
     [System.Serializable()]
     [System.Xml.Serialization.XmlType(Namespace = "ddi:reusable:3_1")]
@@ -15,8 +16,27 @@
         [System.Xml.Serialization.XmlAttribute(DataType = "anyURI")]
         public string externalReferenceDefaultURI { get; set; }
 
+        private Nullable<bool> _isPublished;
+
         [System.Xml.Serialization.XmlAttribute()]
-        public bool isPublished { get; set; }
+        public bool isPublished
+        {
+            get
+            {
+                if (_isPublished.HasValue)
+                    return _isPublished.Value;
+                return false; //default value;
+            }
+            set
+            {
+                this._isPublished = value;
+            }
+        }
+
+        public bool ShouldSerializeisPublished()
+        {
+            return _isPublished.HasValue;
+        }
 
         [System.Xml.Serialization.XmlAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
         public string lang { get; set; }

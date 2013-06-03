@@ -418,7 +418,7 @@ namespace DDIClassLibrary
         }
 
         /// <summary>
-        /// Recursive function which sets all element´s default values.
+        /// Recursive function which sets all elements' default values.
         /// </summary>
         /// <param name="o">The o.</param>
         private void SetElementDefaultValues(object o)

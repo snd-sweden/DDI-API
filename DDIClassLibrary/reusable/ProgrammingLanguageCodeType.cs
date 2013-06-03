@@ -19,7 +19,7 @@ namespace DDIClassLibrary.reusable
         public string Content { get; set; }
 
         [System.Xml.Serialization.XmlAttribute()]
-        public bool programmingLanguage { get; set; }
+        public string programmingLanguage { get; set; }
 
         #region conversion
 
