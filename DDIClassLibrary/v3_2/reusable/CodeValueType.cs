@@ -176,12 +176,30 @@ namespace DDIClassLibrary.v3_2.reusable
 
         public static bool operator ==(CodeValueType content, string n)
         {
-            return content.Content == n;
+            try
+            {
+                return content.Content != n;
+            }
+            catch (NullReferenceException)
+            {
+                if (n == null)
+                    return true;
+                return false;
+            }
         }
 
         public static bool operator !=(CodeValueType content, string n)
         {
-            return content.Content != n;
+            try
+            {
+                return content.Content != n;
+            }
+            catch (NullReferenceException)
+            {
+                if (n == null)
+                    return false;
+                return true;
+            }
         }
 
         public static bool operator <(CodeValueType content, string n)

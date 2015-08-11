@@ -31,8 +31,8 @@ namespace DDIClassLibrary.v3_2.physicalinstance
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 4)]
         public List<ReferenceType> DataRelationshipReference { get; set; }
-        
-        [System.Xml.Serialization.XmlElement(IsNullable = true, Order = 5)]
+
+        [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 5)]
         public List<ReferenceType> RecordLayoutReference { get; set; }
 
         [System.Xml.Serialization.XmlElement(Order = 6)]

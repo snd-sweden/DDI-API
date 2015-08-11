@@ -95,8 +95,18 @@ namespace DDIClassLibrary.v3_2.logicalproduct
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 3)]
         public ParameterType OutParameter { get; set; }
 
+        public bool ShouldSerializeOutParameter()
+        {
+            return OutParameter != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 4)]
         public ReferenceType SourceParameterReference { get; set; }
+
+        public bool ShouldSerializeSourceParameterReference()
+        {
+            return SourceParameterReference != null;
+        }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 5)]
         public List<ReferenceType> SourceVariableReference { get; set; }
@@ -104,14 +114,29 @@ namespace DDIClassLibrary.v3_2.logicalproduct
         [System.Xml.Serialization.XmlElement(Order = 6)]
         public ReferenceType RepresentedVariableReference { get; set; }
 
+        public bool ShouldSerializeRepresentedVariableReference()
+        {
+            return RepresentedVariableReference != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 7)]
         public ReferenceType ConceptualVariableReference { get; set; }
-        
+
+        public bool ShouldSerializeConceptualVariableReference()
+        {
+            return ConceptualVariableReference != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 8)]
         public List<ReferenceType> UniverseReference { get; set; }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 9)]
         public ReferenceType ConceptReference { get; set; }
+
+        public bool ShouldSerializeConceptReference()
+        {
+            return ConceptReference != null;
+        }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 10)]
         public List<ReferenceType> QuestionReference { get; set; }
@@ -119,14 +144,34 @@ namespace DDIClassLibrary.v3_2.logicalproduct
         [System.Xml.Serialization.XmlElement(Order = 11)]
         public ReferenceType EmbargoReference { get; set; }
 
+        public bool ShouldSerializeEmbargoReference()
+        {
+            return EmbargoReference != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Order = 12)]
         public CodeValueType SourceUnit { get; set; }
+
+        public bool ShouldSerializeSourceUnit()
+        {
+            return SourceUnit != null;
+        }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 13)]
         public CodeValueType AnalysisUnit { get; set; }
 
+        public bool ShouldSerializeAnalysisUnit()
+        {
+            return AnalysisUnit != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Order = 14)]
         public VariableRepresentationType VariableRepresentation { get; set; }
+
+        public bool ShouldSerializeVariableRepresentation()
+        {
+            return VariableRepresentation != null;
+        }
 
         /// <summary>
         /// Sets the optional default values.

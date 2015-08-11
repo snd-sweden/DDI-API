@@ -44,6 +44,11 @@ namespace DDIClassLibrary.v3_2.logicalproduct
         [System.Xml.Serialization.XmlElement(Order = 0)]
         public CodeValueType TypeOfVariableGroup { get; set; }
 
+        public bool ShouldSerializeTypeOfVariableGroup()
+        {
+            return TypeOfVariableGroup != null;
+        }
+
         [System.Xml.Serialization.XmlElement(IsNullable = true, Order = 1)]
         public List<NameType> VariableGroupName { get; set; }
 
@@ -58,6 +63,11 @@ namespace DDIClassLibrary.v3_2.logicalproduct
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", Order = 5)]
         public ReferenceType ConceptReference { get; set; }
+
+        public bool ShouldSerializeConceptReference()
+        {
+            return ConceptReference != null;
+        }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 6)]
         public List<InternationalCodeValueType> Subject { get; set; }
