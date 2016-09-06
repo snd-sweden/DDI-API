@@ -11,6 +11,9 @@ namespace DDIClassLibrary.v3_2.instance
     [System.Xml.Serialization.XmlRoot("DDIInstance", Namespace = "ddi:instance:3_2", IsNullable = false)]
     public class DDIInstanceType : MaintainableType
     {
+        [System.Xml.Serialization.XmlAttributeAttribute("schemaLocation", Namespace = System.Xml.Schema.XmlSchema.InstanceNamespace)]
+        public string xsiSchemaLocation = "ddi:instance:3_2 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd";
+
         public DDIInstanceType()
         {
             this.Group = new List<GroupType>();

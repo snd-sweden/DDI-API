@@ -92,36 +92,9 @@ namespace DDIClassLibrary.v3_2
         /// <returns>The DDIInstance serialized to a string</returns>
         public string Serialize()
         {
-            OnSerializingMethod();
-
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ddi", "ddi:instance:3_2");
-            ns.Add("a", "ddi:archive:3_2");
-            ns.Add("c", "ddi:conceptualcomponent:3_2");
-            ns.Add("cm", "ddi:comparative:3_2");
-            ns.Add("d", "ddi:datacollection:3_2");
-            ns.Add("dc", "ddi:dcelements:3_2");
-            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
-            ns.Add("dc_terms", "http://purl.org/dc/terms/");
-            ns.Add("ds", "ddi:dataset:3_2");
-            ns.Add("g", "ddi:group:3_2");
-            ns.Add("l", "ddi:logicalproduct:3_2");
-            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
-            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
-            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
-            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
-            ns.Add("p", "ddi:physicaldataproduct:3_2");
-            ns.Add("pi", "ddi:physicalinstance:3_2");
-            ns.Add("pr", "ddi:ddiprofile:3_2");
-            ns.Add("r", "ddi:reusable:3_2");
-            ns.Add("s", "ddi:studyunit:3_2");
-            ns.Add("xs", "http://www.w3.org/2001/XMLSchema");
-
-            XmlSerializer xs = new XmlSerializer(typeof(DDIInstanceType));
-
             using (StringWriter writer = new StringWriter())
             {
-                xs.Serialize(writer, DDIInstance, ns);
+                Serialize(writer);
 
                 return writer.ToString();
             }
@@ -133,34 +106,10 @@ namespace DDIClassLibrary.v3_2
         /// <param name="writer">The TextWriter used to write the XML document.</param>
         public void Serialize(TextWriter writer)
         {
-            OnSerializingMethod();
-
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ddi", "ddi:instance:3_2");
-            ns.Add("a", "ddi:archive:3_2");
-            ns.Add("c", "ddi:conceptualcomponent:3_2");
-            ns.Add("cm", "ddi:comparative:3_2");
-            ns.Add("d", "ddi:datacollection:3_2");
-            ns.Add("dc", "ddi:dcelements:3_2");
-            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
-            ns.Add("dc_terms", "http://purl.org/dc/terms/");
-            ns.Add("ds", "ddi:dataset:3_2");
-            ns.Add("g", "ddi:group:3_2");
-            ns.Add("l", "ddi:logicalproduct:3_2");
-            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
-            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
-            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
-            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
-            ns.Add("p", "ddi:physicaldataproduct:3_2");
-            ns.Add("pi", "ddi:physicalinstance:3_2");
-            ns.Add("pr", "ddi:ddiprofile:3_2");
-            ns.Add("r", "ddi:reusable:3_2");
-            ns.Add("s", "ddi:studyunit:3_2");
-            ns.Add("xs", "http://www.w3.org/2001/XMLSchema");
+            OnSerializingMethod();      
 
             XmlSerializer xs = new XmlSerializer(typeof(DDIInstanceType));
-
-            xs.Serialize(writer, DDIInstance, ns);
+            xs.Serialize(writer, DDIInstance, GetXmlSerializerNamespaces());
         }
 
         /// <summary>
@@ -171,32 +120,8 @@ namespace DDIClassLibrary.v3_2
         {
             OnSerializingMethod();
 
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ddi", "ddi:instance:3_2");
-            ns.Add("a", "ddi:archive:3_2");
-            ns.Add("c", "ddi:conceptualcomponent:3_2");
-            ns.Add("cm", "ddi:comparative:3_2");
-            ns.Add("d", "ddi:datacollection:3_2");
-            ns.Add("dc", "ddi:dcelements:3_2");
-            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
-            ns.Add("dc_terms", "http://purl.org/dc/terms/");
-            ns.Add("ds", "ddi:dataset:3_2");
-            ns.Add("g", "ddi:group:3_2");
-            ns.Add("l", "ddi:logicalproduct:3_2");
-            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
-            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
-            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
-            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
-            ns.Add("p", "ddi:physicaldataproduct:3_2");
-            ns.Add("pi", "ddi:physicalinstance:3_2");
-            ns.Add("pr", "ddi:ddiprofile:3_2");
-            ns.Add("r", "ddi:reusable:3_2");
-            ns.Add("s", "ddi:studyunit:3_2");
-            ns.Add("xs", "http://www.w3.org/2001/XMLSchema");
-
             XmlSerializer xs = new XmlSerializer(typeof(DDIInstanceType));
-
-            xs.Serialize(writer, DDIInstance, ns);
+            xs.Serialize(writer, DDIInstance, GetXmlSerializerNamespaces());
         }
 
         /// <summary>
@@ -207,32 +132,8 @@ namespace DDIClassLibrary.v3_2
         {
             OnSerializingMethod();
 
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ddi", "ddi:instance:3_2");
-            ns.Add("a", "ddi:archive:3_2");
-            ns.Add("c", "ddi:conceptualcomponent:3_2");
-            ns.Add("cm", "ddi:comparative:3_2");
-            ns.Add("d", "ddi:datacollection:3_2");
-            ns.Add("dc", "ddi:dcelements:3_2");
-            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
-            ns.Add("dc_terms", "http://purl.org/dc/terms/");
-            ns.Add("ds", "ddi:dataset:3_2");
-            ns.Add("g", "ddi:group:3_2");
-            ns.Add("l", "ddi:logicalproduct:3_2");
-            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
-            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
-            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
-            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
-            ns.Add("p", "ddi:physicaldataproduct:3_2");
-            ns.Add("pi", "ddi:physicalinstance:3_2");
-            ns.Add("pr", "ddi:ddiprofile:3_2");
-            ns.Add("r", "ddi:reusable:3_2");
-            ns.Add("s", "ddi:studyunit:3_2");
-            ns.Add("xs", "http://www.w3.org/2001/XMLSchema");
-
             XmlSerializer xs = new XmlSerializer(typeof(DDIInstanceType));
-
-            xs.Serialize(stream, DDIInstance, ns);
+            xs.Serialize(stream, DDIInstance, GetXmlSerializerNamespaces());
         }
 
         /// <summary>
@@ -244,32 +145,8 @@ namespace DDIClassLibrary.v3_2
         {
             OnSerializingMethod();
 
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ddi", "ddi:instance:3_2");
-            ns.Add("a", "ddi:archive:3_2");
-            ns.Add("c", "ddi:conceptualcomponent:3_2");
-            ns.Add("cm", "ddi:comparative:3_2");
-            ns.Add("d", "ddi:datacollection:3_2");
-            ns.Add("dc", "ddi:dcelements:3_2");
-            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
-            ns.Add("dc_terms", "http://purl.org/dc/terms/");
-            ns.Add("ds", "ddi:dataset:3_2");
-            ns.Add("g", "ddi:group:3_2");
-            ns.Add("l", "ddi:logicalproduct:3_2");
-            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
-            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
-            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
-            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
-            ns.Add("p", "ddi:physicaldataproduct:3_2");
-            ns.Add("pi", "ddi:physicalinstance:3_2");
-            ns.Add("pr", "ddi:ddiprofile:3_2");
-            ns.Add("r", "ddi:reusable:3_2");
-            ns.Add("s", "ddi:studyunit:3_2");
-            ns.Add("xs", "http://www.w3.org/2001/XMLSchema");
-
             XmlSerializer xs = new XmlSerializer(typeof(DDIInstanceType));
-
-            xs.Serialize(writer, DDIInstance, ns, encoding);
+            xs.Serialize(writer, DDIInstance, GetXmlSerializerNamespaces(), encoding);
         }
 
         /// <summary>
@@ -506,6 +383,39 @@ namespace DDIClassLibrary.v3_2
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Constructs a XmlSerializerNamespaces object containing the namespaces
+        /// and schemaLocation needed for DDI 3.2.
+        /// </summary>
+        /// <returns>the XmlSerializerNamespaces object</returns>
+        private static XmlSerializerNamespaces GetXmlSerializerNamespaces()
+        {
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("ddi", "ddi:instance:3_2");
+            ns.Add("a", "ddi:archive:3_2");
+            ns.Add("c", "ddi:conceptualcomponent:3_2");
+            ns.Add("cm", "ddi:comparative:3_2");
+            ns.Add("d", "ddi:datacollection:3_2");
+            ns.Add("dc", "ddi:dcelements:3_2");
+            ns.Add("dc2", "http://purl.org/dc/elements/1.1/");
+            ns.Add("dc_terms", "http://purl.org/dc/terms/");
+            ns.Add("ds", "ddi:dataset:3_2");
+            ns.Add("g", "ddi:group:3_2");
+            ns.Add("l", "ddi:logicalproduct:3_2");
+            ns.Add("m1", "ddi:physicaldataproduct_ncube_normal:3_2");
+            ns.Add("m2", "ddi:physicaldataproduct_ncube_tabular:3_2");
+            ns.Add("m3", "ddi:physicaldataproduct_ncube_inline:3_2");
+            ns.Add("m4", "ddi:physicaldataproduct_proprietary:3_2");
+            ns.Add("p", "ddi:physicaldataproduct:3_2");
+            ns.Add("pi", "ddi:physicalinstance:3_2");
+            ns.Add("pr", "ddi:ddiprofile:3_2");
+            ns.Add("r", "ddi:reusable:3_2");
+            ns.Add("s", "ddi:studyunit:3_2");
+            ns.Add("xsi", System.Xml.Schema.XmlSchema.InstanceNamespace);
+
+            return ns;
         }
 
         #endregion

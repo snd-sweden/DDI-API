@@ -9,6 +9,9 @@ namespace DDIClassLibrary.v3_1.instance
     [System.Xml.Serialization.XmlRoot("DDIInstance", Namespace = "ddi:instance:3_1", IsNullable = false)]
     public class DDIInstanceType : MaintainableType
     {
+        [System.Xml.Serialization.XmlAttributeAttribute("schemaLocation", Namespace = System.Xml.Schema.XmlSchema.InstanceNamespace)]
+        public string xsiSchemaLocation = "ddi:instance:3_1 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd";
+
         public DDIInstanceType()
         {
             this.ObjectType = "DDIInstance";
