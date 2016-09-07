@@ -271,6 +271,11 @@ namespace DDIClassLibrary.v3_2.group
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 3)]
         public ReferenceType UniverseReference { get; set; }
 
+        public bool ShouldSerializeUniverseReference()
+        {
+            return this.UniverseReference != null;
+        }
+
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_2", IsNullable = true, Order = 4)]
         public List<SeriesStatementType> SeriesStatement { get; set; }
 

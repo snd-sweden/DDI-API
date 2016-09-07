@@ -11,7 +11,7 @@ namespace DDIClassLibrary.v3_1.datacollection
         {
             this.ObjectType = "ControlConstruct";
 
-            this.ContructName = new List<NameType>();
+            this.ConstructName = new List<NameType>();
             this.Label = new List<LabelType>();
             this.Description = new List<StructuredStringType>();
             this.ExternalAid = new List<OtherMaterialType>();
@@ -20,7 +20,7 @@ namespace DDIClassLibrary.v3_1.datacollection
         }
 
         [System.Xml.Serialization.XmlElement(IsNullable = true, Order = 0)]
-        public List<NameType> ContructName { get; set; }
+        public List<NameType> ConstructName { get; set; }
 
         [System.Xml.Serialization.XmlElement(Namespace = "ddi:reusable:3_1", IsNullable = true, Order = 1)]
         public List<LabelType> Label { get; set; }
