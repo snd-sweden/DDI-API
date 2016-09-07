@@ -1,18 +1,14 @@
-﻿using System;
+﻿using DDIClassLibrary.v3_2;
+using DDIClassLibrary.v3_2.datacollection;
+using DDIClassLibrary.v3_2.instance;
+using DDIClassLibrary.v3_2.logicalproduct;
+using DDIClassLibrary.v3_2.reusable;
+using DDIClassLibrary.v3_2.studyunit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using DDIClassLibrary;
-using DDIClassLibrary.datacollection;
-using DDIClassLibrary.instance;
-using DDIClassLibrary.logicalproduct;
-using DDIClassLibrary.reusable;
-using DDIClassLibrary.studyunit;
 
 namespace DDIClassLibrary_Demo
 {
@@ -38,47 +34,31 @@ namespace DDIClassLibrary_Demo
             //Citation
             {
                 s.Citation = new CitationType();
-                s.Citation.Title.Add(new InternationalStringType("Title"));
-                s.Citation.Title.Add(new InternationalStringType() { lang = "en", Content = "Test title" });
-                s.Citation.Title.Add(new InternationalStringType() { lang = "sv", Content = "Title" });
-                s.Citation.Creator.Add(new CreatorType("Johan Fihn"));
+                s.Citation.Title = new InternationalStringType();
+                s.Citation.Title.String.Add(new StringType() { lang = "en", Content = "Test title" });
+                s.Citation.Title.String.Add(new StringType() { lang = "sv", Content = "Title" });
+
+                CreatorType creator = new CreatorType();
+                creator.CreatorName = new BibliographicNameType();
+                creator.CreatorName.String.Add(new StringType("Johan Fihn"));
+                s.Citation.Creator.Add(creator);
             }
 
             //Abstract
             {
-                s.Abstract.Add(new IdentifiedStructuredStringType()
-                {
-                    Content = new StructuredStringType()
-                    {
-                        lang = "sv",
-                        Content = "Beskrivning"
-                    }
-                });
-
-                s.Abstract.Add(new IdentifiedStructuredStringType()
-                {
-                    Content = new StructuredStringType()
-                    {
-                        lang = "en",
-                        Content = "Abstract"
-                    }
-                });
+                s.Abstract = new StructuredStringType();
+                s.Abstract.Content.Add(new ContentType("Beskrivning", "sv"));
+                s.Abstract.Content.Add(new ContentType("Abstract", "en"));
             }
 
             //SeriesStatement
             {
-                s.SeriesStatement = new SeriesStatementType();
-                s.SeriesStatement.SeriesName.Add(new NameType()
-                {
-                    lang = "sv",
-                    Content = "Min serie"
-                });
-                s.SeriesStatement.SeriesName.Add(new NameType()
-                {
-                    lang = "en",
-                    Content = "My series"
-                });
-                s.SeriesStatement.Abbreviation.Add("test");
+                SeriesStatementType series = new SeriesStatementType();
+
+                series.SeriesName.Add(new NameType("Min serie", "sv"));
+                series.SeriesName.Add(new NameType("My series", "en"));
+
+                s.SeriesStatement.Add(series);
             }
 
             //KindOfData
@@ -109,52 +89,24 @@ namespace DDIClassLibrary_Demo
                 {
                     QuestionItemType qi = new QuestionItemType();
                     qs.QuestionItem.Add(qi);
-                    qi.QuestionText.Add(new DynamicTextType()
-                    {
-                        lang = "sv",
-                        Text = new System.Collections.Generic.List<TextType>()
-                    {
-                        new LiteralTextType()
-                        {
-                            Text = "Fråga #" + i,
-                        }
-                    }
-                    });
-                    qi.QuestionText.Add(new DynamicTextType()
-                    {
-                        lang = "en",
-                        Text = new System.Collections.Generic.List<TextType>()
-                    {
-                        new LiteralTextType()
-                        {
-                            Text = "Question #" + i,
-                        }
-                    }
-                    });
+
+                    DynamicTextType text = new DynamicTextType();
+                    text.TextContent.Add(new LiteralTextType() { Text = new TextType() { Content = "Fråga #" + i, lang = "sv" } });
+                    qi.QuestionText.Add(text);
+
+                    text = new DynamicTextType();
+                    text.TextContent.Add(new LiteralTextType() { Text = new TextType() { Content = "Question #" + i, lang = "en" } });
+                    qi.QuestionText.Add(text);
 
                     VariableType var = new VariableType();
-                    var.VariableName.Add(new NameType()
-                    {
-                        lang = "sv",
-                        Content = "Variabel #" + i
-                    });
-                    var.VariableName.Add(new NameType()
-                    {
-                        lang = "en",
-                        Content = "Variable #" + i
-                    });
-                    var.QuestionReference.Add(new ReferenceType(qi));
+                    var.VariableName.Add(new NameType("Variabel #" + i, "sv"));
+                    var.VariableName.Add(new NameType("Variable #" + i, "en"));
+
                     vs.Variable.Add(var);
                 }
             }
 
-            foreach (string error in wrapper.Validate())
-            {
-                Console.WriteLine(error);
-                Console.Read();
-            }
-
-            using (TextWriter writer = File.CreateText(@"C:\Users\johan\Desktop\ClassLibraryTest.xml"))
+            using (TextWriter writer = File.CreateText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\ClassLibraryTest.xml"))
             {
                 wrapper.Serialize(writer);
             }
