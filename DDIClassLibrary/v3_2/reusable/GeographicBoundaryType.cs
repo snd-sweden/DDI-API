@@ -25,6 +25,11 @@ namespace DDIClassLibrary.v3_2.reusable
         public List<PolygonType> ExcludingPolygon { get; set; }
 
         [System.Xml.Serialization.XmlElement(Order = 4)]
-        public DateTime GeographicTime { get; set; }
+        public Nullable<DateTime> GeographicTime { get; set; }
+
+        public bool ShouldSerializeGeographicTime()
+        {
+            return GeographicTime.HasValue;
+        }
     }
 }
