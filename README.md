@@ -1,5 +1,5 @@
 # DDI-API
-An open class library for DDI Lifecycle (3.1 & 3.2)
+An open .net class library for DDI Lifecycle (3.1 & 3.2)
 
 ## Demo application
 
