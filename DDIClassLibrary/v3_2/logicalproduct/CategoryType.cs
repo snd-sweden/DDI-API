@@ -18,7 +18,7 @@ namespace DDIClassLibrary.v3_2.logicalproduct
         private Nullable<bool> _missing;
 
         [System.Xml.Serialization.XmlAttribute()]
-        public bool missing
+        public bool isMissing
         {
             get
             {
@@ -32,7 +32,7 @@ namespace DDIClassLibrary.v3_2.logicalproduct
             }
         }
 
-        public bool ShouldSerializemissing()
+        public bool ShouldSerializeisMissing()
         {
             return _missing.HasValue;
         }
